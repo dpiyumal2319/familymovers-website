@@ -35,7 +35,7 @@ export function Header() {
             <div className="relative w-10 h-10 md:w-12 md:h-12">
               {/* TODO: Replace with actual logo when available */}
               <div className="w-full h-full bg-primary rounded-md flex items-center justify-center text-primary-foreground font-bold text-lg md:text-xl">
-                FM
+                {BUSINESS_INFO.logoPlaceholder}
               </div>
             </div>
             <span className="font-semibold text-base md:text-lg hidden sm:inline-block">

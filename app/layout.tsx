@@ -81,7 +81,8 @@ export default function RootLayout({
     },
     geo: {
       "@type": "GeoCoordinates",
-      // TODO: Add actual coordinates when available
+      latitude: BUSINESS_INFO.coordinates.latitude,
+      longitude: BUSINESS_INFO.coordinates.longitude,
     },
     description: BUSINESS_INFO.tagline,
     priceRange: "$$",

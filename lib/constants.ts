@@ -5,10 +5,16 @@ export const BUSINESS_INFO = {
   phone: "+64 21 123 4567", // TODO: Extract actual phone from WordPress XML
   location: "Auckland, New Zealand",
   tagline: "Your Trusted Local Movers In Auckland",
+  logoPlaceholder: "FM", // Temporary until actual logo is added
   address: {
     street: "", // TODO: Extract from WordPress XML
     city: "Auckland",
     country: "NZ",
+  },
+  // Default coordinates for Auckland CBD (until actual business location is confirmed)
+  coordinates: {
+    latitude: -36.8485,
+    longitude: 174.7633,
   },
 } as const;
 
