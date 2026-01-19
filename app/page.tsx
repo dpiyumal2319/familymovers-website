@@ -1,19 +1,23 @@
-import { Container } from "@/components/layout/Container";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { IntroSection } from "@/components/sections/IntroSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { SpecsSection } from "@/components/sections/SpecsSection";
+import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
+import { ReviewsSection } from "@/components/sections/ReviewsSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { FAQSection } from "@/components/sections/FAQSection";
 
 export default function Home() {
   return (
-    <Container className="py-16 md:py-24">
-      <div className="flex flex-col items-center gap-6 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-          Welcome to Family Movers Auckland
-        </h1>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-          Your Trusted Local Movers In Auckland
-        </p>
-        <p className="text-base text-muted-foreground max-w-2xl">
-          Phase 2 Design System & Layout components implemented. Homepage sections coming in Phase 3.
-        </p>
-      </div>
-    </Container>
+    <>
+      <HeroSection />
+      <IntroSection />
+      <ServicesSection />
+      <SpecsSection />
+      <WhyChooseUsSection />
+      <ReviewsSection />
+      <CTASection />
+      <FAQSection />
+    </>
   );
 }
