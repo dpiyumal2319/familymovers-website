@@ -226,3 +226,64 @@ npm run build    # Production build (run before PR)
 npm run lint     # ESLint check
 npx shadcn@latest add [component]  # Add shadcn component
 ```
+
+
+## Ressources you have access to
+
+### Links (Allowlisted Domains)
+
+registry.npmjs.org
+registry.yarnpkg.com
+cdn.jsdelivr.net
+
+fonts.google.com
+fonts.gstatic.com
+fonts.googleapis.com
+
+lucide.dev
+unpkg.com
+
+ui.shadcn.com
+github.com
+
+nextjs.org
+vercel.com
+assets.vercel.com
+
+tailwindcss.com
+tailwindui.com
+
+cloudinary.com
+imagekit.io
+unsplash.com
+
+raw.githubusercontent.com
+api.github.com
+
+developer.mozilla.org
+react.dev
+typescriptlang.org
+schema.org
+
+googletagmanager.com
+google-analytics.com
+sentry.io
+
+resend.com
+sendgrid.com
+mailgun.com
+
+### MCP servers
+
+```json
+{
+  "mcpServers": {
+    "shadcn": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"],
+      "tools": ["*"]
+    }
+  }
+}
+```
