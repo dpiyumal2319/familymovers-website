@@ -12,7 +12,7 @@ export function CTASection({ className }: CTASectionProps) {
   return (
     <section
       className={cn(
-        "py-16 md:py-24 bg-primary text-primary-foreground relative overflow-hidden",
+        "py-16 bg-primary text-primary-foreground relative overflow-hidden",
         className
       )}
       aria-labelledby="cta-heading"

@@ -41,7 +41,7 @@ export function SpecsSection({ className }: SpecsSectionProps) {
 
   return (
     <section
-      className={cn("py-16 md:py-24", className)}
+      className={cn("py-16", className)}
       aria-labelledby="specs-heading"
     >
       <div className="container mx-auto px-4">

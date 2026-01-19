@@ -25,7 +25,7 @@ export function ServiceCard({
   return (
     <Card
       className={cn(
-        "h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:scale-105 overflow-hidden",
+        "h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:scale-102 overflow-hidden pt-0",
         className
       )}
     >
@@ -43,7 +43,7 @@ export function ServiceCard({
       <CardHeader>
         {!image && (
           <div
-            className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-primary/10 flex items-center justify-center"
             aria-hidden="true"
           >
             <Icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
@@ -52,7 +52,7 @@ export function ServiceCard({
         <CardTitle className="text-xl md:text-2xl">{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col">
-        <p className="text-muted-foreground mb-4 flex-1">{description}</p>
+        <p className="text-muted-foreground flex-1">{description}</p>
         {href && (
           <Button variant="link" asChild className="px-0 w-fit">
             <Link href={href}>

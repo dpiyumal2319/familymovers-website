@@ -56,7 +56,7 @@ export function FAQSection({ className }: FAQSectionProps) {
 
   return (
     <section
-      className={cn("py-16 md:py-24", className)}
+      className={cn("py-16", className)}
       aria-labelledby="faq-heading"
     >
       <div className="container mx-auto px-4">

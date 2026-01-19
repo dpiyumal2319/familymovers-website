@@ -39,20 +39,12 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       icon: Package,
       image: "/images/packing-services.png",
       href: "/services/packing-services",
-    },
-    {
-      title: "Storage Solutions",
-      description:
-        "Secure storage options for short or long-term needs. Keep your belongings safe with our climate-controlled facilities.",
-      icon: Archive,
-      image: "/images/storage-solutions.png",
-      href: "/services/storage-solutions",
-    },
+    }
   ];
 
   return (
     <section
-      className={cn("py-16 md:py-24", className)}
+      className={cn("py-16", className)}
       aria-labelledby="services-heading"
     >
       <div className="container mx-auto px-16">
@@ -70,7 +62,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

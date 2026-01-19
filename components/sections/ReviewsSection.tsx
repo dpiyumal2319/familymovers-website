@@ -34,7 +34,7 @@ export function ReviewsSection({ className }: ReviewsSectionProps) {
 
   return (
     <section
-      className={cn("py-16 md:py-24 bg-muted/50", className)}
+      className={cn("py-16 bg-muted/50", className)}
       aria-labelledby="reviews-heading"
     >
       <div className="container mx-auto px-16">

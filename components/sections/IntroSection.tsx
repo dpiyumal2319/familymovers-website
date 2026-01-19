@@ -8,7 +8,7 @@ interface IntroSectionProps {
 export function IntroSection({ className }: IntroSectionProps) {
   return (
     <section
-      className={cn("py-16 md:py-24 bg-muted/50", className)}
+      className={cn("py-16 bg-muted/50", className)}
       aria-labelledby="intro-heading"
     >
       <div className="container mx-auto px-4">
