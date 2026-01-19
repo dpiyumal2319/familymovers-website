@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
+import { ElementType, ComponentPropsWithoutRef } from "react";
 
 interface ContainerProps {
   children: React.ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
 }
 
 export function Container({ 
