@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -10,18 +11,21 @@ export function ReviewsSection({ className }: ReviewsSectionProps) {
   const reviews = [
     {
       name: "Sarah Johnson",
+      initials: "SJ",
       location: "Auckland CBD",
       rating: 5,
       text: "Excellent service from start to finish! The team was professional, careful with our belongings, and made our move stress-free. Highly recommend Family Movers!",
     },
     {
       name: "Michael Chen",
+      initials: "MC",
       location: "North Shore",
       rating: 5,
       text: "Best moving company we've used. Fair pricing, punctual, and very efficient. They handled our furniture with great care. Will definitely use them again.",
     },
     {
       name: "Emma Wilson",
+      initials: "EW",
       location: "West Auckland",
       rating: 5,
       text: "Family Movers made our house move so easy! The crew was friendly and hardworking. Everything arrived safely at our new home. Five stars!",
@@ -33,7 +37,7 @@ export function ReviewsSection({ className }: ReviewsSectionProps) {
       className={cn("py-16 md:py-24 bg-muted/50", className)}
       aria-labelledby="reviews-heading"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-16">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2
             id="reviews-heading"
@@ -65,14 +69,19 @@ export function ReviewsSection({ className }: ReviewsSectionProps) {
                     />
                   ))}
                 </div>
-                <p className="text-muted-foreground italic">
-                  &quot;{review.text}&quot;
-                </p>
-                <div className="pt-2 border-t">
-                  <p className="font-semibold">{review.name}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {review.location}
-                  </p>
+                <p className="text-muted-foreground">{review.text}</p>
+                <div className="flex items-center gap-3">
+                  <Avatar className="h-12 w-12">
+                    <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+                      {review.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <p className="font-semibold">{review.name}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {review.location}
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>

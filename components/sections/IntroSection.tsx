@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface IntroSectionProps {
   className?: string;
@@ -11,31 +12,32 @@ export function IntroSection({ className }: IntroSectionProps) {
       aria-labelledby="intro-heading"
     >
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8 md:mb-12">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto mb-12">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <Image
+              src="/images/company-intro.jpg.png"
+              alt="Family Movers professional team with moving truck"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              priority
+            />
+          </div>
+          <div className="lg:order-first space-y-6">
             <h2
               id="intro-heading"
-              className="text-3xl md:text-4xl font-bold mb-4"
+              className="text-3xl md:text-4xl font-bold"
             >
               The Top-Rated Flexible Mover In Auckland
             </h2>
-          </div>
 
-          <div className="space-y-6 text-base md:text-lg text-muted-foreground">
-            <p>
-              Family Movers was established by a group of MBA students from
-              various universities in New Zealand. They spent 1.5 years
-              researching global and local moving technologies and processes to
-              reduce costs for customers who are relocating with their families.
-            </p>
-
-            <p>
+            <p className="text-base md:text-lg text-muted-foreground">
               Family movers offers services to customers at all levels of the
               market. Family Movers offer all kinds of moving solutions and
               options tailored to your financial constraints.
             </p>
 
-            <p>
+            <p className="text-base md:text-lg text-muted-foreground">
               If you possess enough workforce, we can supply rental trucks,
               necessary relocation equipment, and packaging solutions. If you
               have trucks and tailors, all you need is skilled manpower. We will
@@ -45,7 +47,7 @@ export function IntroSection({ className }: IntroSectionProps) {
               within the Auckland area and outer Auckland.
             </p>
 
-            <div className="bg-primary/5 border-l-4 border-primary p-6 md:p-8 rounded-r-lg mt-8">
+            <div className="bg-primary/5 border-l-4 border-primary p-6 md:p-8 rounded-r-lg">
               <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-3">
                 Mission Statement
               </h3>

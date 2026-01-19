@@ -11,10 +11,19 @@ interface CTASectionProps {
 export function CTASection({ className }: CTASectionProps) {
   return (
     <section
-      className={cn("py-16 md:py-24 bg-primary text-primary-foreground", className)}
+      className={cn(
+        "py-16 md:py-24 bg-primary text-primary-foreground relative overflow-hidden",
+        className
+      )}
       aria-labelledby="cta-heading"
     >
-      <div className="container mx-auto px-4">
+      {/* Background pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-10 bg-cover bg-center"
+        style={{ backgroundImage: 'url(/images/cta-background.png)' }}
+        aria-hidden="true"
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
           <h2
             id="cta-heading"
@@ -51,7 +60,7 @@ export function CTASection({ className }: CTASectionProps) {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-base md:text-lg px-8 py-6 border-primary-foreground/30 hover:bg-primary-foreground/10"
+                className="text-base md:text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
               >
                 <Link href={`tel:${BUSINESS_INFO.phone}`}>
                   <Phone className="mr-2 h-5 w-5" aria-hidden="true" />

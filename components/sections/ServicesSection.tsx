@@ -13,6 +13,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       description:
         "Professional home moving services for families. We handle your belongings with care, ensuring a smooth transition to your new home.",
       icon: Home,
+      image: "/images/residential-moving.png",
       href: "/services/residential-moving",
     },
     {
@@ -20,6 +21,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       description:
         "Efficient office and business relocation services. Minimize downtime with our experienced commercial moving team.",
       icon: Building2,
+      image: "/images/commercial-moving.png",
       href: "/services/commercial-moving",
     },
     {
@@ -27,6 +29,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       description:
         "Safe and reliable furniture delivery services. From small items to large pieces, we've got you covered.",
       icon: Truck,
+      image: "/images/furniture-delivery.png",
       href: "/services/furniture-delivery",
     },
     {
@@ -34,6 +37,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       description:
         "Professional packing services to protect your valuables. We use quality materials and expert techniques for safe transport.",
       icon: Package,
+      image: "/images/packing-services.png",
       href: "/services/packing-services",
     },
     {
@@ -41,6 +45,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       description:
         "Secure storage options for short or long-term needs. Keep your belongings safe with our climate-controlled facilities.",
       icon: Archive,
+      image: "/images/storage-solutions.png",
       href: "/services/storage-solutions",
     },
   ];
@@ -50,7 +55,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       className={cn("py-16 md:py-24", className)}
       aria-labelledby="services-heading"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-16">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2
             id="services-heading"
@@ -72,6 +77,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
               title={service.title}
               description={service.description}
               icon={service.icon}
+              image={service.image}
               href={service.href}
             />
           ))}

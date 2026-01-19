@@ -19,8 +19,12 @@ export function HeroSection({ className }: HeroSectionProps) {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10" />
-        {/* Placeholder for background image - will be added in Phase 6 */}
-        <div className="absolute inset-0 bg-muted" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/images/hero-background.png)' }}
+          role="img"
+          aria-label="Professional movers carrying boxes"
+        />
       </div>
 
       {/* Content */}
