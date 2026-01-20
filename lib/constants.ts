@@ -2,19 +2,20 @@ export const BUSINESS_INFO = {
   name: "Family Movers Auckland",
   domain: "familymovers.co.nz",
   email: "sales@familymovers.co.nz",
-  phone: "+64 21 123 4567", // TODO: Extract actual phone from WordPress XML
+  phone: "+64 22 094 9988",
   location: "Auckland, New Zealand",
   tagline: "Your Trusted Local Movers In Auckland",
   logoPlaceholder: "FM", // Temporary until actual logo is added
   address: {
-    street: "", // TODO: Extract from WordPress XML
+    street: "31D Stanniland Street, Sunnyhills",
     city: "Auckland",
+    postalCode: "2010",
     country: "NZ",
   },
-  // Default coordinates for Auckland CBD (until actual business location is confirmed)
+  // Coordinates for Sunnyhills, Auckland
   coordinates: {
-    latitude: -36.8485,
-    longitude: 174.7633,
+    latitude: -36.9166,
+    longitude: 174.8977,
   },
 } as const;
 
