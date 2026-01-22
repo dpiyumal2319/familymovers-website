@@ -23,7 +23,7 @@ export function MobileNav() {
         <Button
           variant="ghost"
           size="icon"
-          className="lg:hidden"
+          className="lg:hidden text-primary"
           aria-label="Open mobile menu"
         >
           <Menu className="h-6 w-6" />
@@ -107,6 +107,16 @@ export function MobileNav() {
               onClick={() => setOpen(false)}
             >
               <Instagram className="h-5 w-5" />
+            </a>
+            <a
+              href={BUSINESS_INFO.social.email}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center h-10 w-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+              aria-label="Email"
+              onClick={() => setOpen(false)}
+            >
+              <Mail className="h-5 w-5" />
             </a>
           </div>
         </div>

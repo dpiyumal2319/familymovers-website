@@ -24,10 +24,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300 border-b",
+        "sticky top-0 z-50 w-full transition-all duration-300 border-b border-white/10",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm"
-          : "bg-background"
+          ? "bg-black/95 backdrop-blur-md shadow-lg"
+          : "bg-black"
       )}
     >
       <div className="container mx-auto px-4">
@@ -45,10 +45,10 @@ export function Header() {
               />
             </div>
             <div className="hidden md:flex flex-col">
-              <span className="text-lg font-bold text-foreground leading-tight">
+              <span className="text-lg font-bold text-white leading-tight">
                 Family Movers
               </span>
-              <span className="text-xs text-muted-foreground">
+              <span className="text-xs text-white/70">
                 Auckland
               </span>
             </div>
@@ -65,7 +65,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors whitespace-nowrap"
+                  className="text-sm font-medium text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
                 >
                   {link.label}
                 </Link>
@@ -73,10 +73,10 @@ export function Header() {
             </nav>
 
             {/* Contact Info */}
-            <div className="flex items-center gap-4 border-l pl-6">
+            <div className="flex items-center gap-4 border-l border-white/20 pl-6">
               <a
                 href={`tel:${BUSINESS_INFO.phone}`}
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
+                className="flex items-center gap-2 text-sm text-white/80 hover:text-primary transition-colors whitespace-nowrap"
               >
                 <Phone className="h-4 w-4" />
                 <span className="font-medium">{BUSINESS_INFO.phoneDisplay}</span>
@@ -84,12 +84,12 @@ export function Header() {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-2 border-l pl-4">
+            <div className="flex items-center gap-2 border-l border-white/20 pl-4">
               <a
                 href={BUSINESS_INFO.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-white/70 hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-4 w-4" />
@@ -98,7 +98,7 @@ export function Header() {
                 href={BUSINESS_INFO.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-white/70 hover:text-primary transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-4 w-4" />
@@ -107,7 +107,7 @@ export function Header() {
                 href={BUSINESS_INFO.social.email}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-white/70 hover:text-primary transition-colors"
                 aria-label="Email"
               >
                 <Mail className="h-4 w-4" />
