@@ -27,7 +27,7 @@ export default function ContactUsPage() {
           src="/images/contact-hero.png"
           alt="Contact Family Movers"
           fill
-          className="object-cover"
+          className="object-cover opacity-30"
           priority
         />
         <Container className="relative z-10">

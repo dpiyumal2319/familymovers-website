@@ -24,7 +24,7 @@ export default function AboutUsPage() {
           src="/images/about-hero.png"
           alt="Family Movers team"
           fill
-          className="object-cover"
+          className="object-cover opacity-30"
           priority
         />
         <Container className="relative z-10">
