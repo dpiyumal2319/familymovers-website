@@ -1,6 +1,5 @@
-import { ServiceCard } from "@/components/common/ServiceCard";
-import { Home, Building2, Truck, Package, Archive } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ServicesCarousel } from "./ServicesCarousel";
 
 interface ServicesSectionProps {
   className?: string;
@@ -9,37 +8,77 @@ interface ServicesSectionProps {
 export function ServicesSection({ className }: ServicesSectionProps) {
   const services = [
     {
-      title: "Residential Moving",
+      title: "Local Moving",
       description:
-        "Professional home moving services for families. We handle your belongings with care, ensuring a smooth transition to your new home.",
-      icon: Home,
-      image: "/images/residential-moving.png",
-      href: "/services/residential-moving",
+        "Whether you need one bedroom or three, moving into a new home has never been easier. Put the worries of getting into your new place aside and start enjoying your new space.",
+      iconName: "Home",
+      image: "/images/local-moving.png",
+      href: "/services/local-moving",
+    },
+    {
+      title: "Long Distance Moving",
+      description:
+        "Don't let your long distance move stress you out. Family Movers is well equipped to handle every aspect of moving your life from one county to another with speed and efficiency.",
+      iconName: "MapPin",
+      image: "/images/long-distance-moving.png",
+      href: "/services/long-distance-moving",
     },
     {
       title: "Commercial Moving",
       description:
-        "Efficient office and business relocation services. Minimize downtime with our experienced commercial moving team.",
-      icon: Building2,
+        "Moving offices requires the careful coordination of a lot of moving parts. At Family Movers, we have the expertise to make things run smoothly and ensure your company is back in full working order on time.",
+      iconName: "Building2",
       image: "/images/commercial-moving.png",
       href: "/services/commercial-moving",
     },
     {
-      title: "Furniture Delivery",
-      description:
-        "Safe and reliable furniture delivery services. From small items to large pieces, we've got you covered.",
-      icon: Truck,
-      image: "/images/furniture-delivery.png",
-      href: "/services/furniture-delivery",
-    },
-    {
       title: "Packing Services",
       description:
-        "Professional packing services to protect your valuables. We use quality materials and expert techniques for safe transport.",
-      icon: Package,
+        "Sometimes packing can be more stressful than the move itself. If that's the case for you, we can step in and take care of it. We're packing specialists trained in the art of the perfect pack.",
+      iconName: "Package",
       image: "/images/packing-services.png",
       href: "/services/packing-services",
-    }
+    },
+    {
+      title: "Truck and Van Rental",
+      description:
+        "Make your move a breeze with our convenient Truck and Van rentals. From small loads to big hauls, we've got you covered. Say goodbye to stress and hello to easy transportation with Family Movers.",
+      iconName: "Truck",
+      image: "/images/truck-van-rental.png",
+      href: "/services/truck-van-rental",
+    },
+    {
+      title: "Manpower Supply",
+      description:
+        "Effortless loading and unloading guaranteed. Let our skilled team handle the heavy lifting while you focus on your move. Family Movers, your trusted moving partner.",
+      iconName: "Users",
+      image: "/images/man-power-supply.png",
+      href: "/services/man-power-supply",
+    },
+    {
+      title: "Piano Moving",
+      description:
+        "Moving a piano requires the expertise to ensure it is kept safe and protected on the road. Our specialized team handles your piano with the utmost care.",
+      iconName: "Piano",
+      image: "/images/piano-moving.png",
+      href: "/services/piano-moving",
+    },
+    {
+      title: "Pool Table Moving",
+      description:
+        "Pool tables require special handling due to their weight and delicate components. Trust our experienced team to move your pool table safely.",
+      iconName: "CircleDot",
+      image: "/images/pool-table-moving.png",
+      href: "/services/pool-table-moving",
+    },
+    {
+      title: "Furniture Removals",
+      description:
+        "Our teams will treat your possessions like they would their own, ensuring that the greatest care and diligence is taken.",
+      iconName: "Armchair",
+      image: "/images/furniture-removals.png",
+      href: "/services/furniture-removals",
+    },
   ];
 
   return (
@@ -47,33 +86,22 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       className={cn("py-16", className)}
       aria-labelledby="services-heading"
     >
-      <div className="container mx-auto px-16">
+      <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2
             id="services-heading"
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            Our Services
+            For Every Family Move
           </h2>
           <p className="text-lg text-muted-foreground">
-            Don&apos;t let your long distance move stress you out. Family Movers
-            is well equipped to handle every aspect of moving your life from one
+            Don&apos;t let your move stress you out. Family Movers is well
+            equipped to handle every aspect of moving your life from one
             location to another with speed and efficiency.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              image={service.image}
-              href={service.href}
-            />
-          ))}
-        </div>
+        <ServicesCarousel services={services} />
       </div>
     </section>
   );

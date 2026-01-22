@@ -3,9 +3,15 @@ export const BUSINESS_INFO = {
   domain: "familymovers.co.nz",
   email: "sales@familymovers.co.nz",
   phone: "+64 22 094 9988",
+  phoneDisplay: "022 094 9988",
   location: "Auckland, New Zealand",
   tagline: "Your Trusted Local Movers In Auckland",
   logoPlaceholder: "FM", // Temporary until actual logo is added
+  social: {
+    facebook: "https://facebook.com/familymoversauckland",
+    instagram: "https://instagram.com/familymoversauckland",
+    twitter: "https://twitter.com/familymovers",
+  },
   address: {
     street: "31D Stanniland Street, Sunnyhills",
     city: "Auckland",

@@ -43,11 +43,12 @@ export function ReviewsSection({ className }: ReviewsSectionProps) {
             id="reviews-heading"
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            What Our Customers Say
+            What Do Our Customers Say
           </h2>
           <p className="text-lg text-muted-foreground">
-            Don&apos;t just take our word for it. Here&apos;s what our satisfied
-            customers have to say about their moving experience with us.
+            Our movers consider no task to be too small or too large. Regardless
+            of the item you require transported, our team will deliver it
+            door-to-door at a reasonable cost.
           </p>
         </div>
 

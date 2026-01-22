@@ -36,8 +36,8 @@ export default function RequestQuotationPage() {
       {/* Main Content */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-4 gap-8">
               {/* Benefits Sidebar */}
               <div className="lg:col-span-1 space-y-6">
                 <div>
@@ -54,7 +54,7 @@ export default function RequestQuotationPage() {
                       "Professional service guarantee",
                     ].map((benefit) => (
                       <div key={benefit} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                         <span className="text-sm text-muted-foreground">
                           {benefit}
                         </span>
@@ -86,7 +86,7 @@ export default function RequestQuotationPage() {
               </div>
 
               {/* Quote Form */}
-              <div className="lg:col-span-2">
+              <div className="lg:col-span-3">
                 <Card className="p-6 md:p-8">
                   <QuoteForm />
                 </Card>

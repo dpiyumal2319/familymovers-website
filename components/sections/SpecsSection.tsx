@@ -1,5 +1,6 @@
-import { CheckCircle2 } from "lucide-react";
+import { DollarSign, ShieldCheck, PackageCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface SpecsSectionProps {
   className?: string;
@@ -8,34 +9,16 @@ interface SpecsSectionProps {
 export function SpecsSection({ className }: SpecsSectionProps) {
   const features = [
     {
-      title: "Full Moving Services",
-      description:
-        "Complete household and office moving services across New Zealand with professional expertise.",
+      title: "No Extra Prices",
+      icon: DollarSign,
     },
     {
-      title: "Trusted & Reliable",
-      description:
-        "A local moving company in Auckland that you can trust for all your relocation needs.",
+      title: "No Scratches",
+      icon: ShieldCheck,
     },
     {
-      title: "Transparent Pricing",
-      description:
-        "Affordable hourly rates with no hidden costs. We uphold our quotes and absorb additional expenses.",
-    },
-    {
-      title: "Experienced Team",
-      description:
-        "Trained and professional movers dedicated to making your move stress-free and efficient.",
-    },
-    {
-      title: "Quality Equipment",
-      description:
-        "Our trucks are equipped with blankets, shrink wrap, tape, dollies, and all necessary tools.",
-    },
-    {
-      title: "Customer Service",
-      description:
-        "Outstanding customer service with honesty and integrity at the core of everything we do.",
+      title: "No Lost Items",
+      icon: PackageCheck,
     },
   ];
 
@@ -45,38 +28,54 @@ export function SpecsSection({ className }: SpecsSectionProps) {
       aria-labelledby="specs-heading"
     >
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2
-            id="specs-heading"
-            className="text-3xl md:text-4xl font-bold mb-4"
-          >
-            Why Choose Family Movers?
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            You can count on us to meet all of your moving needs. Our local
-            household and office moving services in Auckland serve all across
-            New Zealand with full moving services, so we can meet any need you
-            might have.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex gap-4 p-6 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <Image
+              src="/images/why-choose-us.png"
+              alt="Professional movers carefully handling furniture"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+            />
+          </div>
+          <div className="space-y-6">
+            <h2
+              id="specs-heading"
+              className="text-3xl md:text-4xl font-bold"
             >
-              <div className="flex-shrink-0" aria-hidden="true">
-                <CheckCircle2 className="w-6 h-6 text-primary" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-lg md:text-xl font-semibold">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </div>
+              Why Choose Us
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground text-justify">
+              You can count on us to meet all of your moving needs. Our local
+              household and office moving services in Auckland serve all across
+              New Zealand with full moving services, so we can meet any need you
+              might have. If you&apos;re looking for a local moving company in
+              the area of Auckland that you can trust, look no further, Family
+              Movers is here for you!
+            </p>
+
+            <div className="grid grid-cols-3 gap-4 pt-4">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center text-center space-y-3 p-4"
+                  >
+                    <div
+                      className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center"
+                      aria-hidden="true"
+                    >
+                      <Icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-sm md:text-base font-semibold">
+                      {feature.title}
+                    </h3>
+                  </div>
+                );
+              })}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
