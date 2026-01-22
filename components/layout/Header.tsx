@@ -34,7 +34,7 @@ export function Header() {
         <div className="flex h-20 md:h-24 items-center justify-between gap-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="relative w-16 h-16 md:w-20 md:h-20">
+            <div className="relative w-16 h-16 md:w-22 md:h-22">
               <Image
                 src="/logo.png"
                 alt={`${BUSINESS_INFO.name} Logo`}

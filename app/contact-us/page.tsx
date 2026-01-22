@@ -183,7 +183,7 @@ export default function ContactUsPage() {
             </h2>
             <div className="aspect-video w-full rounded-lg overflow-hidden border shadow-lg">
               <iframe
-                src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.0!2d${BUSINESS_INFO.coordinates.longitude}!3d${BUSINESS_INFO.coordinates.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDU1JzAwLjAiUyAxNzTCsDUzJzUyLjAiRQ!5e0!3m2!1sen!2snz!4v1234567890`}
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d199.40772458214835!2d174.89286900473869!3d-36.90174372617833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4ba42591fedb%3A0xa0e43e16b89275ad!2s31d%20Stanniland%20Street%2C%20Sunnyhills%2C%20Auckland%202010%2C%20New%20Zealand!5e0!3m2!1sen!2slk!4v1769089477992!5m2!1sen!2slk"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

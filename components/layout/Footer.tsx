@@ -8,7 +8,7 @@ export function Footer() {
 
   return (
     <footer className="bg-muted border-t">
-      <Container className="py-12 md:py-16">
+      <Container className="pt-12 md:pt-16 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
@@ -94,17 +94,22 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Google Maps Embed - Placeholder */}
-        <div className="mt-12 rounded-lg overflow-hidden border">
-          <div className="w-full h-64 bg-muted-foreground/10 flex items-center justify-center">
-            <p className="text-muted-foreground text-sm">
-              Google Maps Embed - To be added with actual location
-            </p>
-          </div>
+        {/* Google Maps */}
+        <div className="mt-12 w-full h-[300px] rounded-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d199.40772458214835!2d174.89286900473869!3d-36.90174372617833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4ba42591fedb%3A0xa0e43e16b89275ad!2s31d%20Stanniland%20Street%2C%20Sunnyhills%2C%20Auckland%202010%2C%20New%20Zealand!5e0!3m2!1sen!2slk!4v1769089781695!5m2!1sen!2slk"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Family Movers Auckland Location"
+          />
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
+        <div className="mt-8 pt-6 border-t text-center text-sm text-muted-foreground">
           <p>
             © {currentYear} {BUSINESS_INFO.name}. All rights reserved.
           </p>
