@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Phone, Mail, Facebook, Instagram, Twitter } from "lucide-react";
+import { Menu, Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -107,16 +107,6 @@ export function MobileNav() {
               onClick={() => setOpen(false)}
             >
               <Instagram className="h-5 w-5" />
-            </a>
-            <a
-              href={BUSINESS_INFO.social.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center h-10 w-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
-              aria-label="Twitter"
-              onClick={() => setOpen(false)}
-            >
-              <Twitter className="h-5 w-5" />
             </a>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { Card } from "@/components/ui/card";
@@ -19,8 +20,16 @@ export default function RequestQuotationPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-primary py-16 md:py-24">
-        <Container>
+      <section className="relative bg-primary py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black/40" />
+        <Image
+          src="/images/quote-process.png"
+          alt="Get a free moving quote"
+          fill
+          className="object-cover"
+          priority
+        />
+        <Container className="relative z-10">
           <div className="text-center text-primary-foreground">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Request a Free Quote

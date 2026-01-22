@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Truck, Shield, Users, Target } from "lucide-react";
 
@@ -17,8 +18,16 @@ export default function AboutUsPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-primary py-16 md:py-24">
-        <Container>
+      <section className="relative bg-primary py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black/40" />
+        <Image
+          src="/images/about-hero.png"
+          alt="Family Movers team"
+          fill
+          className="object-cover"
+          priority
+        />
+        <Container className="relative z-10">
           <div className="text-center text-primary-foreground">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90">

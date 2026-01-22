@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
 import { Container } from "@/components/layout/Container";
 import { ContactForm } from "@/components/forms/ContactForm";
@@ -20,8 +21,16 @@ export default function ContactUsPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-primary py-16 md:py-24">
-        <Container>
+      <section className="relative bg-primary py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black/40" />
+        <Image
+          src="/images/contact-hero.png"
+          alt="Contact Family Movers"
+          fill
+          className="object-cover"
+          priority
+        />
+        <Container className="relative z-10">
           <div className="text-center text-primary-foreground">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90">

@@ -7,7 +7,7 @@ import { MobileNav } from "./MobileNav";
 import { NAV_LINKS, BUSINESS_INFO } from "@/lib/constants";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Phone, Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, Facebook, Instagram, Mail } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -104,13 +104,13 @@ export function Header() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href={BUSINESS_INFO.social.twitter}
+                href={BUSINESS_INFO.social.email}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Twitter"
+                aria-label="Email"
               >
-                <Twitter className="h-4 w-4" />
+                <Mail className="h-4 w-4" />
               </a>
             </div>
 
