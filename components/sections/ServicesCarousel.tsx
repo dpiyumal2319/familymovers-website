@@ -50,7 +50,7 @@ interface ServicesCarouselProps {
 
 export function ServicesCarousel({ services }: ServicesCarouselProps) {
   const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: true })
   );
 
   return (

@@ -1,5 +1,30 @@
 import { cn } from "@/lib/utils";
 import { ServicesCarousel } from "./ServicesCarousel";
+import { ServiceCard } from "@/components/common/ServiceCard";
+import {
+  Home,
+  Building2,
+  Truck,
+  Package,
+  MapPin,
+  Users,
+  Piano,
+  Armchair,
+  CircleDot,
+  LucideIcon,
+} from "lucide-react";
+
+const iconMap: Record<string, LucideIcon> = {
+  Home,
+  Building2,
+  Truck,
+  Package,
+  MapPin,
+  Users,
+  Piano,
+  Armchair,
+  CircleDot,
+};
 
 interface ServicesSectionProps {
   className?: string;
@@ -101,7 +126,26 @@ export function ServicesSection({ className }: ServicesSectionProps) {
           </p>
         </div>
 
-        <ServicesCarousel services={services} />
+        {/* Mobile: 2-column grid */}
+        <div className="grid grid-cols-2 gap-3 md:hidden">
+          {services.map((service, index) => (
+            <div key={index} className="flex">
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                icon={iconMap[service.iconName] || Home}
+                image={service.image}
+                href={service.href}
+                compact
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: Carousel */}
+        <div className="hidden md:block">
+          <ServicesCarousel services={services} />
+        </div>
       </div>
     </section>
   );

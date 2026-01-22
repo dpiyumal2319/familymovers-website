@@ -12,6 +12,7 @@ interface ServiceCardProps {
   image?: string;
   href?: string;
   className?: string;
+  compact?: boolean;
 }
 
 export function ServiceCard({
@@ -21,11 +22,62 @@ export function ServiceCard({
   image,
   href,
   className,
+  compact = false,
 }: ServiceCardProps) {
+  if (compact) {
+    return (
+      <Card
+        className={cn(
+          "h-full flex flex-col transition-all duration-300 hover:shadow-md overflow-hidden group pt-0 gap-0",
+          className
+        )}
+      >
+        {image && (
+          <div className="relative aspect-[4/3] overflow-hidden bg-muted mb-3">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+        )}
+        <CardHeader>
+          {!image && (
+            <div
+              className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center mb-1"
+              aria-hidden="true"
+            >
+              <Icon className="w-4 h-4 text-primary" />
+            </div>
+          )}
+          <CardTitle className="text-sm font-semibold leading-tight line-clamp-2 mb-0">
+            {title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex-1 flex flex-col ">
+          <p className="text-xs text-muted-foreground line-clamp-3 flex-1">
+            {description}
+          </p>
+          {href && (
+            <Link
+              href={href}
+              className="inline-flex items-center text-xs text-primary hover:text-primary/80 font-medium mt-2 group-hover:underline"
+            >
+              Learn more
+              <ArrowRight className="ml-1 h-3 w-3" aria-hidden="true" />
+            </Link>
+          )}
+        </CardContent>
+      </Card>
+    );
+  }
+
   return (
     <Card
       className={cn(
-        "h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:scale-102 overflow-hidden pt-0",
+        "h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:scale-102 overflow-hidden pt-0 gap-4",
         className
       )}
     >
