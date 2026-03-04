@@ -11,10 +11,14 @@ export const metadata: Metadata = {
   title: "Our Services",
   description:
     "Explore our comprehensive moving services in Auckland - local moving, long distance moving, commercial relocations, packing services, truck rentals, piano moving, and more.",
+  alternates: {
+    canonical: "/services",
+  },
   openGraph: {
     title: "Our Services | Family Movers Auckland",
     description:
       "Professional moving services for every need - residential, commercial, local, and long distance moves across Auckland and New Zealand.",
+    url: "/services",
   },
 };
 

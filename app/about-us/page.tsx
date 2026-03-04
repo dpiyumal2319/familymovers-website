@@ -7,10 +7,14 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about Family Movers Auckland - established by MBA students researching moving technologies to reduce costs for families relocating. Stress-free moving with quality, safety, and efficiency.",
+  alternates: {
+    canonical: "/about-us",
+  },
   openGraph: {
     title: "About Us | Family Movers Auckland",
     description:
       "Professional moving company in Auckland committed to stress-free relocations with quality service and trained professionals.",
+    url: "/about-us",
   },
 };
 

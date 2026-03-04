@@ -5,9 +5,13 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Family Movers Auckland privacy policy. Learn how we collect, use, and protect your personal information.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   openGraph: {
     title: "Privacy Policy | Family Movers Auckland",
     description: "Our commitment to protecting your privacy and personal data.",
+    url: "/privacy-policy",
   },
 };
 

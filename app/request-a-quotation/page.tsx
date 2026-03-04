@@ -9,10 +9,14 @@ export const metadata: Metadata = {
   title: "Request a Free Quotation",
   description:
     "Get a free, no-obligation quote from Family Movers Auckland. Fill out our quick form and we'll get back to you within minutes with a competitive quote for your move.",
+  alternates: {
+    canonical: "/request-a-quotation",
+  },
   openGraph: {
     title: "Request a Free Quotation | Family Movers Auckland",
     description:
       "Get a free moving quote in minutes. Professional, affordable moving services in Auckland.",
+    url: "/request-a-quotation",
   },
 };
 
