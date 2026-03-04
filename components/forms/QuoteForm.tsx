@@ -56,6 +56,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  submitQuoteRequestAction,
+  type QuoteSubmissionPayload,
+} from "@/app/request-a-quotation/actions";
 
 // Service types from WordPress
 const serviceTypes = [
@@ -314,21 +318,35 @@ export function QuoteForm({ className }: QuoteFormProps) {
     setIsSubmitting(true);
 
     try {
-      console.log("Quote form data:", data);
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const payload: QuoteSubmissionPayload = {
+        ...data,
+        termsAccepted: true,
+        specificDate: data.specificDate?.toISOString() ?? null,
+        dateRangeFrom: data.dateRangeFrom?.toISOString() ?? null,
+        dateRangeTo: data.dateRangeTo?.toISOString() ?? null,
+        preferredTime: data.preferredTime?.trim() ? data.preferredTime : null,
+        moreDetails: data.moreDetails?.trim() ? data.moreDetails : null,
+      };
+
+      const result = await submitQuoteRequestAction(payload);
+      if (!result.success) {
+        throw new Error(result.message);
+      }
 
       toast.success("Quote request submitted!", {
-        description:
-          "We'll review your request and get back to you within minutes.",
+        description: result.message,
       });
 
       form.reset();
       setCurrentStep(1);
     } catch (error) {
-      console.error("Form submission error:", error);
+      console.error("Quote form submission error:", error);
+      const description =
+        error instanceof Error
+          ? error.message
+          : "Please try again or contact us directly via phone or email.";
       toast.error("Failed to submit quote request", {
-        description:
-          "Please try again or contact us directly via phone or email.",
+        description,
       });
     } finally {
       setIsSubmitting(false);

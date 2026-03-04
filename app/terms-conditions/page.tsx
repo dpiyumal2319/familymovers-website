@@ -8,10 +8,14 @@ export const metadata: Metadata = {
   title: "Terms and Conditions",
   description:
     "Terms and Conditions for Family Movers Auckland moving services. Read our policies on bookings, deposits, liability, cancellations, and more.",
+  alternates: {
+    canonical: "/terms-conditions",
+  },
   openGraph: {
     title: "Terms and Conditions | Family Movers Auckland",
     description:
       "Read our terms and conditions for moving services including booking policies, liability, and cancellations.",
+    url: "/terms-conditions",
   },
 };
 

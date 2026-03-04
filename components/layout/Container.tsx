@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ElementType, ComponentPropsWithoutRef } from "react";
+import { ElementType } from "react";
 
 interface ContainerProps {
   children: React.ReactNode;

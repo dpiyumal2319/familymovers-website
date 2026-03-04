@@ -10,10 +10,14 @@ export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Get in touch with Family Movers Auckland. Contact us for a free quote or any questions about our moving services. Email, phone, or visit our office in Sunnyhills, Auckland.",
+  alternates: {
+    canonical: "/contact-us",
+  },
   openGraph: {
     title: "Contact Us | Family Movers Auckland",
     description:
       "Reach out to Family Movers Auckland for professional moving services. We're here to help with your relocation needs.",
+    url: "/contact-us",
   },
 };
 
