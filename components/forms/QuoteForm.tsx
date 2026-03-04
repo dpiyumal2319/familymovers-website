@@ -320,6 +320,7 @@ export function QuoteForm({ className }: QuoteFormProps) {
     try {
       const payload: QuoteSubmissionPayload = {
         ...data,
+        termsAccepted: true,
         specificDate: data.specificDate?.toISOString() ?? null,
         dateRangeFrom: data.dateRangeFrom?.toISOString() ?? null,
         dateRangeTo: data.dateRangeTo?.toISOString() ?? null,

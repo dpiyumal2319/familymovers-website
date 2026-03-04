@@ -6,7 +6,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { BUSINESS_INFO } from "@/lib/constants";
 import { ThemeProvider } from "@/components/theme-provider";
-import { TestToastButton } from "@/components/common/TestToastButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -116,7 +115,6 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <Toaster />
-          <TestToastButton />
         </ThemeProvider>
       </body>
     </html>
