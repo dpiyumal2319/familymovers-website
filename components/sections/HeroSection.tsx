@@ -18,7 +18,7 @@ export function HeroSection({ className }: HeroSectionProps) {
     >
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black/80 z-10" />
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(/images/hero-background.png)' }}

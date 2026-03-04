@@ -19,6 +19,7 @@ const floorOptions: FloorOption[] = [
   { id: "townhouse", label: "Townhouse", icon: Building2 },
   { id: "stairs-2", label: "2nd Floor (Stairs)", icon: ArrowUp },
   { id: "stairs-3", label: "3rd Floor (Stairs)", icon: ArrowUpFromDot },
+  { id: "stairs-4", label: "4th Floor (Stairs)", icon: ArrowUpFromDot },
   { id: "elevator", label: "Elevator", icon: Building2 },
 ];
 
