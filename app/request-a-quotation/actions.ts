@@ -93,7 +93,9 @@ const buildTextBody = (payload: QuoteSubmissionPayload) => {
       ? `Specific date: ${formatDate(payload.specificDate)}${payload.preferredTime ? ` at ${payload.preferredTime}` : ""}`
       : payload.dateFlexibility === "range"
         ? `Date range: ${formatDate(payload.dateRangeFrom)} to ${formatDate(payload.dateRangeTo)}`
-        : "Date preference: Flexible";
+        : payload.dateFlexibility === "asap"
+          ? "Date preference: ASAP (as soon as possible)"
+          : "Date preference: Flexible";
 
   return [
     "New quote request received",
@@ -119,7 +121,9 @@ const buildHtmlBody = (payload: QuoteSubmissionPayload) => {
       ? `Specific date: ${formatDate(payload.specificDate)}${payload.preferredTime ? ` at ${payload.preferredTime}` : ""}`
       : payload.dateFlexibility === "range"
         ? `Date range: ${formatDate(payload.dateRangeFrom)} to ${formatDate(payload.dateRangeTo)}`
-        : "Date preference: Flexible";
+        : payload.dateFlexibility === "asap"
+          ? "Date preference: ASAP (as soon as possible)"
+          : "Date preference: Flexible";
 
   return `
     <h2>New quote request received</h2>
@@ -136,6 +140,16 @@ const buildHtmlBody = (payload: QuoteSubmissionPayload) => {
     <hr />
     <p><strong>More details:</strong><br />${payload.moreDetails?.trim() ? payload.moreDetails : "None"}</p>
   `;
+};
+
+const buildSubject = (payload: QuoteSubmissionPayload) => {
+  const name = `${payload.firstName} ${payload.lastName}`;
+
+  if (payload.dateFlexibility === "asap") {
+    return `URGENT ASAP Quote Request - ${name}`;
+  }
+
+  return `New Quote Request - ${name}`;
 };
 
 export async function submitQuoteRequestAction(
@@ -178,7 +192,7 @@ export async function submitQuoteRequestAction(
           ? [process.env.QUOTE_FORM_CC_EMAIL]
           : undefined,
         reply_to: payload.email,
-        subject: `New Quote Request - ${payload.firstName} ${payload.lastName}`,
+        subject: buildSubject(payload),
         text: buildTextBody(payload),
         html: buildHtmlBody(payload),
       }),
