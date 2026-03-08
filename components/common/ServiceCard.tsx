@@ -65,7 +65,7 @@ export function ServiceCard({
               href={href}
               className="inline-flex items-center text-xs text-primary hover:text-primary/80 font-medium mt-2 group-hover:underline"
             >
-              Learn more
+              Learn more about {title}
               <ArrowRight className="ml-1 h-3 w-3" aria-hidden="true" />
             </Link>
           )}
@@ -108,7 +108,7 @@ export function ServiceCard({
         {href && (
           <Button variant="link" asChild className="px-0 w-fit">
             <Link href={href}>
-              Learn more
+              Learn more about {title}
               <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>
           </Button>

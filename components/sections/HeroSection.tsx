@@ -59,7 +59,7 @@ export function HeroSection({ className }: HeroSectionProps) {
               size="lg"
               className="text-base md:text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
             >
-              <Link href="/about-us">Learn More</Link>
+              <Link href="/about-us">Learn more about Family Movers</Link>
             </Button>
           </div>
         </div>
